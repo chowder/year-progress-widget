@@ -1,6 +1,6 @@
 import datetime
 import json
-import os.path
+import os
 
 
 def get_day_of_year(ref: datetime.datetime) -> int:
