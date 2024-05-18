@@ -1,0 +1,95 @@
+{
+  "name": "Year Countdown",
+  "version": 1,
+  "data": {
+    "year": "2024",
+    "pie_chart": "https://i.imgur.com/dyTryuE.png",
+    "percentage": "38%"
+  },
+  "layouts": {
+    "default": {
+      "size": "small",
+      "styles": {
+        "colors": {
+          "background_gradient": {
+            "color": "#efd5ff"
+          },
+          "text_colour": {
+            "color": "#000000"
+          }
+        },
+        "fonts": {
+          "default": {
+            "family": "Chalkboard SE"
+          }
+        }
+      },
+      "layers": [
+        {
+          "rows": [
+            {
+              "height": 12,
+              "cells": [
+                {
+                  "width": 12,
+                  "background_color_style": "background_gradient"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "rows": [
+            {
+              "height": 3,
+              "cells": [
+                {
+                  "width": 12,
+                  "text": {
+                    "data_ref": "year",
+                    "size": 20,
+                    "font_style": "default",
+                    "color_style": "text_colour",
+                    "weight": "extra_bold"
+                  }
+                }
+              ]
+            },
+            {
+              "height": 6,
+              "cells": [
+                {
+                  "width": 3
+                },
+                {
+                  "width": 6,
+                  "image": {
+                    "data_ref": "pie_chart"
+                  }
+                },
+                {
+                  "width": 3
+                }
+              ]
+            },
+            {
+              "height": 3,
+              "cells": [
+                {
+                  "width": 12,
+                  "text": {
+                    "data_ref": "percentage",
+                    "size": 20,
+                    "font_style": "default",
+                    "color_style": "text_colour",
+                    "weight": "extra_bold"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
