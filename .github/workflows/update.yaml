@@ -17,7 +17,5 @@ jobs:
       - run: python update_widget.py
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: widget
           commit_message: Daily widget update
           file_pattern: "widget.json"
-          create_branch: true
