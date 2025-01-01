@@ -6,12 +6,12 @@ from playwright.sync_api import sync_playwright
 def pie(day_of_year: int):
     chart = Pie(width="200px", height="200px")
 
-    WHITE = "#00000000"
-    GREEN = "#AFE1AF"
+    EMPTY = "#F9D5A7"
+    FILL = "#FFB085"
 
     chart.set_options(
         labels=["done", "remaining"],
-        colors=[GREEN, WHITE],
+        colors=[FILL, EMPTY],
         inner_radius=0
     )
     days_in_year = 365
@@ -39,7 +39,7 @@ if __name__ == "__main__":
             page.goto("file:///home/chowder/code/countdown/render.html")
             page.evaluate("document.body.style.zoom=5.0")
             page.screenshot(
-                path=f"bars/{i}.png",
+                path=f"raw/{i}.png",
                 omit_background=True,
                 clip={
                     "x": 450,
